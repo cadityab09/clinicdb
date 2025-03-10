@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: mysql-server
+    env: docker
+    plan: free
+    autoDeploy: false
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: MYSQL_ROOT_PASSWORD
+        value: rootpassword
+      - key: MYSQL_DATABASE
+        value: clinicdb
+      - key: MYSQL_USER
+        value: admin
+      - key: MYSQL_PASSWORD
+        value: password
